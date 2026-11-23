@@ -5,7 +5,7 @@ description: Read-only content API - changelog entries, help articles and video 
 resource: repo://fusion-content/internal/api/router.go
 tags: [content, api, docs]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: router, resource: repo://fusion-content/internal/api/router.go, title: content router.go }
   - { id: auth, resource: repo://fusion-content/internal/api/middleware/auth.go, title: content auth middleware }

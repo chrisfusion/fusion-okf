@@ -5,7 +5,7 @@ description: Accepted - every Go repo commits vendor/ and builds with -mod=vendo
 resource: repo://fusion-bff/docs/go-vendoring-blueprint.md
 tags: [forge, index, weave, bff, ext-bff, wizard, content, shared, build, decision]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:10:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: blueprint, resource: repo://fusion-bff/docs/go-vendoring-blueprint.md, title: go-vendoring-blueprint.md }
   - { id: index-cl, resource: repo://fusion-index/CHANGELOG.md, title: fusion-index CHANGELOG }

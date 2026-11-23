@@ -48,6 +48,7 @@ make check      # validate + index.md up to date + drift (non-zero exit on error
 make index      # regenerate every index.md from frontmatter
 make drift      # pages whose repo:// sources changed after their generated.at
 make validate   # conformance only
+make verify PAGES="platform/overview.md"   # after human review: verified + status stable
 ```
 
 - **validate** - OKF conformance (frontmatter, `type`, reserved files) plus the profile above;
@@ -56,6 +57,8 @@ make validate   # conformance only
 - **drift** - compares the last git commit of every `repo://` source with the page's
   `generated.at`. A newer source (or uncommitted changes) means the page may be stale: re-check it,
   update it and bump `generated.at`.
+  Commits whose message contains `[okf-skip]` are ignored (use it for changes that cannot affect the
+  bundle, such as the pointer line in each CLAUDE.md).
 - **index** - `index.md` files are generated; never edit them by hand. Directory headings and
   descriptions come from `bundle/.okf-dirs.yaml`.
 

@@ -5,7 +5,7 @@ description: CRUD over the weave CRDs (job/service templates, chains, apps, trig
 resource: repo://fusion-flux/apidescription.md
 tags: [weave, api, scheduling]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: desc, resource: repo://fusion-flux/apidescription.md, title: fusion-weave apidescription.md }
   - { id: router, resource: repo://fusion-flux/internal/apiserver/router.go, title: weave router.go }

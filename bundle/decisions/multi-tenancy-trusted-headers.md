@@ -5,7 +5,7 @@ description: Proposed (draft design) - the BFF resolves owner groups and sends r
 resource: repo://fusion-shared/docs/multi-tenancy.md
 tags: [bff, forge, index, weave, wizard, shared, multi-tenancy, auth, decision]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:10:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: mt, resource: repo://fusion-shared/docs/multi-tenancy.md, title: multi-tenancy plan }
   - { id: bff, resource: repo://fusion-bff/CLAUDE.md, title: fusion-bff CLAUDE.md }

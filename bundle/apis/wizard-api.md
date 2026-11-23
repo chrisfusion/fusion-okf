@@ -5,7 +5,7 @@ description: Wizard API on port 8083 - list definitions, create/retry/rollback/d
 resource: repo://fusion-wizard/internal/apiserver/router.go
 tags: [wizard, api, provisioning]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: router, resource: repo://fusion-wizard/internal/apiserver/router.go, title: wizard router.go }
   - { id: server, resource: repo://fusion-wizard/internal/apiserver/server.go, title: wizard server.go }

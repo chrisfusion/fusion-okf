@@ -5,7 +5,7 @@ description: Accepted - index dropped its bundled Bitnami Postgres subchart (0.4
 resource: repo://fusion-index/CHANGELOG.md
 tags: [index, postgres, build, decision]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:10:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: cl, resource: repo://fusion-index/CHANGELOG.md, title: fusion-index CHANGELOG }
   - { id: index, resource: repo://fusion-index/CLAUDE.md, title: fusion-index CLAUDE.md }

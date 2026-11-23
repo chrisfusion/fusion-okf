@@ -4,7 +4,7 @@ title: The BFF owns the whole OIDC flow
 description: Accepted - fusion-bff runs the OIDC login and keeps tokens server-side behind an HttpOnly session cookie; fusion-spectra never sees Keycloak or a token.
 tags: [bff, spectra, auth, decision]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:10:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: spectra, resource: repo://fusion-spectra/CLAUDE.md, title: fusion-spectra CLAUDE.md }
   - { id: bff, resource: repo://fusion-bff/CLAUDE.md, title: fusion-bff CLAUDE.md }

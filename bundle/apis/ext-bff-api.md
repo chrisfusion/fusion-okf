@@ -5,7 +5,7 @@ description: Machine-client gateway to fusion-index only - an authenticated /api
 resource: repo://fusion-ext-system-bff/ENDPOINT.md
 tags: [ext-bff, index, api, auth]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: endpoint, resource: repo://fusion-ext-system-bff/ENDPOINT.md, title: ext-bff ENDPOINT.md }
   - { id: router, resource: repo://fusion-ext-system-bff/internal/api/router.go, title: ext-bff router.go }

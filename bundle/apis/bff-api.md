@@ -5,7 +5,7 @@ description: BFF-owned endpoints under /bff (login, userinfo, preferences, prese
 resource: repo://fusion-bff/internal/docs/openapi.yaml
 tags: [bff, api, auth, rbac, proxy]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: spec, resource: repo://fusion-bff/internal/docs/openapi.yaml, title: fusion-bff openapi.yaml }
   - { id: router, resource: repo://fusion-bff/internal/api/router.go, title: bff router.go }

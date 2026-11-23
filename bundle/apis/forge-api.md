@@ -5,7 +5,7 @@ description: Build API of fusion-forge - requirements, git and app builds, GitWa
 resource: repo://fusion-forge/internal/api/router.go
 tags: [forge, api, build]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: router, resource: repo://fusion-forge/internal/api/router.go, title: forge router.go }
   - { id: auth, resource: repo://fusion-forge/internal/api/middleware/auth.go, title: forge auth middleware }

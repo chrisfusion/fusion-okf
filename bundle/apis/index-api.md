@@ -5,7 +5,7 @@ description: Artifact registry API - artifacts, semver versions, files, tags, ty
 resource: repo://fusion-index/internal/api/openapi/openapi.yaml
 tags: [index, api, artifacts]
 status: draft
-generated: { by: claude-code/opus-5.5, at: 2026-11-23T13:40:00Z }
+generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:40:00Z }
 sources:
   - { id: spec, resource: repo://fusion-index/internal/api/openapi/openapi.yaml, title: fusion-index openapi.yaml }
   - { id: router, resource: repo://fusion-index/internal/api/router.go, title: index router.go }

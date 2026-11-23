@@ -255,7 +255,8 @@ def git_last_change(file: Path) -> tuple[dt.datetime | None, bool]:
     repo = file.parent
     def git(*args: str) -> str:
         return subprocess.run(["git", "-C", str(repo), *args], capture_output=True, text=True).stdout.strip()
-    date = git("log", "-1", "--format=%cI", "--", file.name)
+    # Commits marked [okf-skip] (e.g. adding the bundle pointer line) do not count as content changes.
+    date = git("log", "-1", "--format=%cI", "--invert-grep", "--grep=\\[okf-skip\\]", "--", file.name)
     dirty = bool(git("status", "--porcelain", "--", file.name))
     return (to_datetime(date) if date else None), dirty
 
@@ -280,13 +281,42 @@ def drift(concepts: list[Concept], repos_root: Path, report: Report) -> None:
                 report.warn(c.rel, f"source changed {changed.isoformat()} after generated.at: {res}")
 
 
+# --------------------------------------------------------------------------- verify
+
+
+def verify(bundle: Path, pages: list[str], by: str, report: Report) -> None:
+    """Mark reviewed pages: add verified {by, at} and move status draft -> stable."""
+    now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    for rel in pages:
+        path = bundle / rel
+        if not path.is_file():
+            report.error(rel, "no such page")
+            continue
+        text = path.read_text(encoding="utf-8")
+        head, sep, body = text.partition("\n---\n")
+        if not head.startswith("---") or not sep:
+            report.error(rel, "no frontmatter")
+            continue
+        if "\nverified:" in head:
+            report.error(rel, "already verified - edit it by hand")
+            continue
+        lines = head.split("\n")
+        at = next((i for i, l in enumerate(lines) if l.startswith("generated:")), len(lines) - 1)
+        lines.insert(at + 1, f"verified: {{ by: {by}, at: {now} }}")
+        head = "\n".join("status: stable" if l == "status: draft" else l for l in lines)
+        path.write_text(head + sep + body, encoding="utf-8")
+        print(f"verified {rel}")
+
+
 # --------------------------------------------------------------------------- main
 
 
 def main() -> int:
     here = Path(__file__).resolve().parent.parent
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["validate", "index", "drift", "check"])
+    parser.add_argument("command", choices=["validate", "index", "drift", "check", "verify"])
+    parser.add_argument("pages", nargs="*", help="verify: bundle-relative page paths")
+    parser.add_argument("--by", default="", help="verify: reviewer, e.g. human:chrisfusion")
     parser.add_argument("--bundle", type=Path, default=here / "bundle")
     parser.add_argument("--repos-root", type=Path, default=here.parent,
                         help="directory holding the sibling fusion-* repos (repo:// root)")
@@ -299,6 +329,11 @@ def main() -> int:
     elif args.command == "drift":
         report = Report()  # drift output only
         drift(concepts, args.repos_root, report)
+    elif args.command == "verify":
+        if not args.pages or not args.by:
+            parser.error("verify needs page paths and --by")
+        report = Report()
+        verify(args.bundle, args.pages, args.by, report)
     elif args.command == "check":
         write_indexes(args.bundle, concepts, check_only=True, report=report)
         drift(concepts, args.repos_root, report)
