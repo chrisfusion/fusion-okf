@@ -14,7 +14,7 @@ sources:
 | Service | Database | Server |
 |---|---|---|
 | [forge](/services/fusion-forge.md) | own | bundled raw manifests in its chart (`postgresql.enabled`, default true)[^fleet] |
-| [index](/services/fusion-index.md) | `fusion_index` | external since 0.5.0. The Bitnami subchart is gone, and upgrading a 0.4.x release prunes its StatefulSet.[^fleet] |
+| [index](/services/fusion-index.md) | `fusion_index` | external since 0.4.0 per its changelog (fleet says 0.5.0). The Bitnami subchart is gone, and upgrading an old release prunes its StatefulSet.[^fleet] See the [decision](/decisions/index-external-postgres-distroless.md). |
 | [bff](/services/fusion-bff.md) | `fusion_bff` (optional) | the index server, via `db.dsn`[^bff] |
 | content, weave, wizard | none (weave and wizard state lives in CRDs) | - |
 
