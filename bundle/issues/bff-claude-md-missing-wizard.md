@@ -4,6 +4,7 @@ title: fusion-bff CLAUDE.md does not mention the wizard upstream
 description: The BFF proxies /api/wizard/* to fusion-wizard (health at /healthz), but the BFF's CLAUDE.md never mentions wizard.
 resource: repo://fusion-bff/CLAUDE.md
 tags: [bff, wizard, docs]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

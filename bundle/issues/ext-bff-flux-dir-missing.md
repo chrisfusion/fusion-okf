@@ -4,6 +4,7 @@ title: fusion-ext-system-bff CLAUDE.md describes a flux/ directory that does not
 description: ext-bff's CLAUDE.md lists Flux config in flux/ with three environments, but the directory is missing and neither ext-bff nor wizard has a HelmRelease in fusion-fleet.
 resource: repo://fusion-ext-system-bff/CLAUDE.md
 tags: [ext-bff, wizard, fleet, docs, deployment]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

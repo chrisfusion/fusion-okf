@@ -22,7 +22,7 @@ sources:
 | [fusion-weave](/services/fusion-weave.md) | operator plus API server in one binary | v0.19.3[^flux-mod] | v0.31.0 |
 | [fusion-wizard](/services/fusion-wizard.md) | operator plus API | v0.19.3[^wizard-mod] | v0.31.0 |
 
-All three are on the same versions today. *Proposal:* upgrade them together, since they share CRD tooling (`controller-gen`) and run on the same clusters.
+All three are on the same versions today. Rule (agreed by `human:chrisfusion` on 2026-11-23): upgrade them together, since they share CRD tooling (`controller-gen`) and run on the same clusters.
 
 # Practice
 

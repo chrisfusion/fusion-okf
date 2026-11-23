@@ -4,6 +4,7 @@ title: fusion-content uses the standard log package against the logging rules
 description: The shared logging principles forbid import "log", but fusion-content logs with log.Printf and its CLAUDE.md says not to migrate to slog.
 resource: repo://fusion-content/CLAUDE.md
 tags: [content, shared, logging]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

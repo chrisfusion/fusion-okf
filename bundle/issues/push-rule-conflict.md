@@ -4,6 +4,7 @@ title: Conflicting git push rules between spectra and fleet
 description: fusion-spectra's CLAUDE.md says push to origin only, while fusion-fleet's says push to gitea freely and never to origin without confirmation.
 resource: repo://fusion-fleet/CLAUDE.md
 tags: [spectra, fleet, git, deployment]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

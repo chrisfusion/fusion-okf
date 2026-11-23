@@ -4,6 +4,7 @@ title: fusion-index accepts an upload named ".."
 description: The multipart filename goes unvalidated into the storage path, so a file named ".." resolves to the version's parent directory on the filesystem backend.
 resource: repo://fusion-index/internal/api/handlers/files.go
 tags: [index, storage, security]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

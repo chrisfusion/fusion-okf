@@ -3,6 +3,7 @@ type: Known Issue
 title: Local port-forward ports used twice
 description: The CLAUDE.md files forward forge and index both to local port 18080, and content and ext-bff both to 18082, so these pairs cannot be port-forwarded at the same time.
 tags: [content, ext-bff, operations]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

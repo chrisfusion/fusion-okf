@@ -30,7 +30,7 @@ sources:
 # Rules
 
 - Health routes are public and sit outside auth. In chi (weave), register them on the root router *before* the Auth/RBAC middleware.
-- *Proposal, not yet agreed:* new Go services use `/healthz` + `/readyz` (the controller-runtime family). Keep `/q/health/*` where it exists, because probes, the bff and smoke tests depend on it.
+- New Go services use `/healthz` + `/readyz` (the controller-runtime family; agreed by `human:chrisfusion` on 2026-11-23). Keep `/q/health/*` where it exists, because probes, the bff and smoke tests depend on it.
 - Anything that probes another service (e.g. the bff's `/bff/system-health`) must use the target's real path. The bff defaults are currently wrong for three services: [known issue](/issues/bff-health-url-defaults.md).
 
 [^forge-chart]: forge server-deployment.yaml

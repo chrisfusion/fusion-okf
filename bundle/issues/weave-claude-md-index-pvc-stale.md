@@ -4,6 +4,7 @@ title: fusion-weave CLAUDE.md says index has no PVC
 description: fusion-weave's CLAUDE.md claims fusion-index-backend loses artifact files on restart, but index now has an artifacts PVC enabled in values-dev.yaml.
 resource: repo://fusion-flux/CLAUDE.md
 tags: [weave, index, docs, storage]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

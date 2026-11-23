@@ -3,8 +3,9 @@ type: Platform Overview
 title: fusion-platform overview
 description: Kubernetes-native platform that builds Python apps and venvs from git, stores them as versioned artifacts and runs them as jobs, DAGs or services.
 tags: [platform, architecture]
-status: draft
+status: stable
 generated: { by: claude-code/opus-5.5, at: 2026-11-17T14:30:00Z }
+verified: { by: human:chrisfusion, at: 2026-11-23T12:47:41Z }
 sources:
   - { id: bff, resource: repo://fusion-bff/CLAUDE.md, title: fusion-bff CLAUDE.md }
   - { id: forge, resource: repo://fusion-forge/CLAUDE.md, title: fusion-forge CLAUDE.md }

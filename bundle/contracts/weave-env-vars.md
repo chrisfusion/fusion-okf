@@ -3,8 +3,9 @@ type: Contract
 title: WEAVE_* environment variables
 description: Env vars that fusion-weave injects into codeSource containers from the resolved artifact and its metadata.yaml, and that fusion-runner consumes.
 tags: [weave, runner, contract]
-status: draft
+status: stable
 generated: { by: claude-code/opus-5.5, at: 2026-11-17T14:30:00Z }
+verified: { by: human:chrisfusion, at: 2026-11-23T12:47:41Z }
 sources:
   - { id: flux, resource: repo://fusion-flux/CLAUDE.md, title: fusion-weave CLAUDE.md }
   - { id: runner, resource: repo://fusion-runner/CLAUDE.md, title: fusion-runner CLAUDE.md }

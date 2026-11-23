@@ -24,6 +24,7 @@ OKF_VERSION = "0.2"
 RESERVED = {"index.md", "log.md"}
 PROFILE_REQUIRED = ("type", "title", "description")
 STATUS_VALUES = {"draft", "stable", "deprecated"}
+RESOLUTION_VALUES = {"unresolved", "resolved", "wontfix"}  # Known Issue only
 ACTOR_RE = re.compile(r"^(human:[\w.@-]+|process:[\w.@-]+|[\w.-]+/[\w.:-]+)$")
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)\)")
 FOOTNOTE_REF_RE = re.compile(r"\[\^([\w-]+)\](?!:)")
@@ -138,6 +139,12 @@ def validate_meta(c: Concept, report: Report) -> None:
     status = c.meta.get("status")
     if status is not None and status not in STATUS_VALUES:
         report.error(c.rel, f"invalid status '{status}'")
+    resolution = c.meta.get("resolution")
+    if c.meta.get("type") == "Known Issue":
+        if resolution not in RESOLUTION_VALUES:
+            report.error(c.rel, f"Known Issue needs resolution: one of {sorted(RESOLUTION_VALUES)}")
+    elif resolution is not None:
+        report.error(c.rel, "resolution is only allowed on Known Issue pages")
     generated = c.meta.get("generated")
     if generated is not None:
         if not isinstance(generated, dict) or not generated.get("by"):
@@ -220,7 +227,8 @@ def render_indexes(bundle: Path, concepts: list[Concept]) -> dict[Path, str]:
         if items:
             lines += ["## Concepts", ""]
             for c in items:
-                lines.append(f"* [{c.meta.get('title')}]({c.path.name}) - {c.meta.get('description', '')}")
+                marker = f"**{c.meta['resolution']}** " if c.meta.get("resolution") else ""
+                lines.append(f"* {marker}[{c.meta.get('title')}]({c.path.name}) - {c.meta.get('description', '')}")
             lines.append("")
         subdirs = sorted(p for p in d.iterdir() if p.is_dir())
         if subdirs:

@@ -3,8 +3,9 @@ type: Platform Overview
 title: Artifact lifecycle
 description: End-to-end path of an app from a git push through forge build, index storage and tag move to a running weave workload.
 tags: [platform, forge, index, weave, runner, wizard, flow]
-status: draft
+status: stable
 generated: { by: claude-code/opus-5.5, at: 2026-11-17T14:30:00Z }
+verified: { by: human:chrisfusion, at: 2026-11-23T12:47:41Z }
 sources:
   - { id: forge, resource: repo://fusion-forge/CLAUDE.md, title: fusion-forge CLAUDE.md }
   - { id: index, resource: repo://fusion-index/CLAUDE.md, title: fusion-index CLAUDE.md }

@@ -4,6 +4,7 @@ title: fusion-runner CLAUDE.md points to a missing tmp_create_docker.md
 description: fusion-runner's CLAUDE.md sends readers to tmp_create_docker.md for the full env-var reference, but no such file exists in any repo.
 resource: repo://fusion-runner/CLAUDE.md
 tags: [runner, weave, docs, env]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

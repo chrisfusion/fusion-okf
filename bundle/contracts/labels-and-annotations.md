@@ -3,8 +3,9 @@ type: Contract
 title: Labels, annotations and finalizers
 description: Kubernetes label, annotation and finalizer keys under fusion-platform.io used across forge, weave and wizard, and what each one means.
 tags: [weave, forge, wizard, contract, kubernetes]
-status: draft
+status: stable
 generated: { by: claude-code/opus-5.5, at: 2026-11-17T14:30:00Z }
+verified: { by: human:chrisfusion, at: 2026-11-23T12:47:41Z }
 sources:
   - { id: flux, resource: repo://fusion-flux/CLAUDE.md, title: fusion-weave CLAUDE.md }
   - { id: forge, resource: repo://fusion-forge/CLAUDE.md, title: fusion-forge CLAUDE.md }

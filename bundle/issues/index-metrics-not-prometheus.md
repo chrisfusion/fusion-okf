@@ -4,6 +4,7 @@ title: fusion-index /q/metrics is JSON, not Prometheus
 description: The Quarkus-style path /q/metrics returns a JSON registry snapshot, so a Prometheus scrape of it fails.
 resource: repo://fusion-index/internal/api/handlers/metrics.go
 tags: [index, metrics, observability]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

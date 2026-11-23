@@ -4,8 +4,9 @@ title: metadata.yaml
 description: App manifest at the root of an app repo - parsed by forge at build time, stored in index, read by weave at deploy time and consumed by the runner via WEAVE_* env vars.
 resource: repo://fusion-testcases/simple_streamlit_template/metadata.yaml
 tags: [forge, index, weave, runner, wizard, contract]
-status: draft
+status: stable
 generated: { by: claude-code/opus-5.5, at: 2026-11-17T14:30:00Z }
+verified: { by: human:chrisfusion, at: 2026-11-23T12:47:41Z }
 sources:
   - { id: forge, resource: repo://fusion-forge/CLAUDE.md, title: fusion-forge CLAUDE.md }
   - { id: forge-meta, resource: repo://fusion-forge/internal/gitutil/metadata.go, title: forge metadata.go parser }

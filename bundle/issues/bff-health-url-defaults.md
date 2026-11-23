@@ -4,6 +4,7 @@ title: BFF health probe defaults miss forge, index and weave
 description: fusion-bff probes `<url>/health` for forge, index and weave, but none of them serves that path, so /bff/system-health reports them down unless the URL is overridden.
 resource: repo://fusion-bff/internal/config/config.go
 tags: [bff, forge, index, weave, health]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

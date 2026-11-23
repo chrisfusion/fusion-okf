@@ -4,6 +4,7 @@ title: forge builder functions buildFromGit and buildFromApp are named backwards
 description: In fusion-forge's builder, buildFromGit handles pyproject.toml wheels and buildFromApp handles metadata.yaml apps - the opposite of what the names suggest.
 resource: repo://fusion-forge/CLAUDE.md
 tags: [forge, build, naming]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

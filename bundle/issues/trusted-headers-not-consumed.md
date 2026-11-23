@@ -4,6 +4,7 @@ title: forge and index ignore the X-User-* trusted headers
 description: The BFF forwards X-User-* identity and group headers, but neither fusion-forge nor fusion-index reads them yet, so owner-group isolation is not enforced.
 resource: repo://fusion-shared/docs/multi-tenancy.md
 tags: [forge, index, bff, auth, multi-tenancy]
+resolution: unresolved
 status: draft
 generated: { by: claude-code/opus-5.5, at: 2026-11-23T12:30:00Z }
 sources:

@@ -3,8 +3,9 @@ type: Contract
 title: Artifact naming and versioning
 description: How build outputs are named, versioned and tagged in fusion-index (app.<name>, venv.<name>, semver, movable tags) and which services rely on it.
 tags: [index, forge, weave, spectra, wizard, contract]
-status: draft
+status: stable
 generated: { by: claude-code/opus-5.5, at: 2026-11-17T14:30:00Z }
+verified: { by: human:chrisfusion, at: 2026-11-23T12:47:41Z }
 sources:
   - { id: forge, resource: repo://fusion-forge/CLAUDE.md, title: fusion-forge CLAUDE.md }
   - { id: index, resource: repo://fusion-index/CLAUDE.md, title: fusion-index CLAUDE.md }

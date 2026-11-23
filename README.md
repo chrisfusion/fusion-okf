@@ -33,6 +33,7 @@ Start reading at [`bundle/index.md`](bundle/index.md) or [`bundle/platform/overv
 | `sources` | Files the page was derived from, `repo://<repo>/<path>`; claims cite them with footnotes `[^id]` |
 | `generated` | `{ by: claude-code/opus-5.5, at: ... }` for generated content, `human:<id>` for hand-written |
 | `verified` | Added when a human reviewed the page (`human:chrisfusion`) - makes it *human-reviewed* |
+| `resolution` | Required on `Known Issue` pages, forbidden elsewhere: `unresolved`, `resolved` or `wontfix` (shown in the generated index) |
 | `status` | Generated pages start as `draft`, become `stable` after review |
 | Links | Bundle-absolute (`/services/fusion-forge.md`) |
 
