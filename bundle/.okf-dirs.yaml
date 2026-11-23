@@ -1,0 +1,19 @@
+# Headings and descriptions for the generated index.md files (tools/okf_check.py index).
+# Key = bundle-relative directory ("." = bundle root).
+".":
+  title: fusion-platform knowledge bundle
+platform:
+  title: Platform
+  description: What the platform is, how the services fit together and the end-to-end artifact flow.
+services:
+  title: Services
+  description: One page per fusion-* repository - purpose, interfaces, dependencies, deployment.
+contracts:
+  title: Contracts
+  description: Shapes shared between services - manifests, naming, env vars, headers, labels.
+contracts/crds:
+  title: Custom resources
+  description: The eleven CRDs of forge, weave and wizard, who writes and who reads them.
+glossary:
+  title: Glossary
+  description: Platform terms, one page per term.
