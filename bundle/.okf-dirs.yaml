@@ -29,3 +29,6 @@ operations:
 decisions:
   title: Decisions
   description: Architecture decisions the sources state explicitly, with status (accepted or proposed), context and consequences.
+apis:
+  title: REST APIs
+  description: One page per service API - base path, auth, route groups and gotchas, linking to the OpenAPI file or router instead of copying it.

@@ -6,6 +6,7 @@ okf_version: "0.2"
 
 ## Subdirectories
 
+* [apis](apis/index.md) - One page per service API - base path, auth, route groups and gotchas, linking to the OpenAPI file or router instead of copying it.
 * [contracts](contracts/index.md) - Shapes shared between services - manifests, naming, env vars, headers, labels.
 * [conventions](conventions/index.md) - Rules every repo follows - offline builds, logging, changelog and releases, Helm and CRDs, operators, health endpoints.
 * [decisions](decisions/index.md) - Architecture decisions the sources state explicitly, with status (accepted or proposed), context and consequences.
