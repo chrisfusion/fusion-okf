@@ -21,7 +21,7 @@ sources:
 | `spec.codeSource` | index artifact + tag loaded at pod start ([code source](/glossary/code-source.md)) |
 | `spec.command`, `args`, `env`, `resources`, `volumes` | container definition |
 | `spec.writablePaths[]` | `mountPath`, `sizeLimit`, `medium` - emptyDirs for read-only root filesystems |
-| `spec.serviceAccountName`, security contexts | subject to the workload policy |
+| `spec.serviceAccountName`, security contexts | pod service account; security contexts override `WORKLOAD_SECURITY_DEFAULTS` |
 | `spec.service` | type=service: `ports`, `replicas`, `serviceType`, `ingressName` / `ingress`, `ingressAnnotations`, probes |
 | `spec.entrypoints[]` | type=job: `name`, `command`, `args`, `env`, `schedule` (6-field, seconds first) |
 | `spec.externalAuthRef` | jobs only |

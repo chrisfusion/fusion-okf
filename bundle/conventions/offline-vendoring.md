@@ -32,7 +32,7 @@ The CI environment that builds images has no internet access, so builds must not
 
 # Go versions
 
-All modules are on Go 1.25 except [fusion-weave](/services/fusion-weave.md), which moved to 1.27.3 (go.mod `toolchain` line, `golang:1.27.3-alpine`). Outside Docker the pinned toolchain must be installed (`GOTOOLCHAIN=local`). For weave on a box whose system Go is older, leave `GOTOOLCHAIN` unset so the cached toolchain is used, and use the toolchain's own `gofmt`.[^flux]
+All Go modules are on Go 1.25 (`golang:1.25-alpine`). Outside Docker the pinned toolchain must be installed (`GOTOOLCHAIN=local`).[^flux]
 
 # Special cases
 

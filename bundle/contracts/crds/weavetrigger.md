@@ -34,7 +34,6 @@ sources:
 
 - Fire on demand: annotation `fusion-platform.io/fire=true` (use `--overwrite`).
 - Created runs carry the labels `fusion-platform.io/trigger` and `fusion-platform.io/chain` (BatchCron also `fusion-platform.io/batch-job-id`); custom trigger labels are **not** propagated.
-- Kafka credentials need Secrets labelled `fusion-platform.io/kafka-credentials=true` and brokers on `KAFKA_ALLOWED_BROKERS`.
 - REST: generic `/api/v1/triggers` plus dedicated `/batchtriggers` (creates the jobs ConfigMap) and `/kafkatriggers`.[^flux]
 
 [^types]: weavetrigger_types.go

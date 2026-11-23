@@ -19,8 +19,7 @@ sources:
 | `spec.resources`, `volumes` (Secret/ConfigMap mounts) | resources and mounts |
 | `spec.retryPolicy` | `maxRetries`, `backoffSeconds` |
 | `spec.parallelism`, `completions`, `activeDeadlineSeconds` | batch/v1 Job knobs |
-| `spec.serviceAccountName` | must pass the workload policy (`WORKLOAD_SERVICE_ACCOUNTS`) |
-| `spec.podSecurityContext`, `containerSecurityContext` | merged with `WORKLOAD_SECURITY_DEFAULTS` (template wins) |
+| `spec.podSecurityContext`, `containerSecurityContext` | override `WORKLOAD_SECURITY_DEFAULTS` entirely when set |
 | `spec.codeSource` | load an index artifact at pod start ([code source](/glossary/code-source.md)) |
 | `status.valid`, `validationMessage` | validation result; an invalid template gates its chain |
 

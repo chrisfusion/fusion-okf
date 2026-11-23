@@ -41,8 +41,6 @@ The name: the directory is `fusion-flux`, the service, chart, git origin and Flu
 The operator, not the API, is the real gate (Flux, kubectl and PATCH bypass API validation):[^flux]
 
 - `ALLOWED_IMAGE_PREFIXES` - image allowlist for run/trigger overrides; for WeaveApps an empty list means unrestricted.
-- Workload policy on every built PodSpec: allowed service accounts, Secrets must carry `fusion-platform.io/mountable=true`, security floor, image allowlist.
-- `FUSION_INDEX_URL` + `FUSION_INDEX_ALLOWED_URLS` - user-set `indexURL` must be allowed.
 - Ingress hosts are DNS labels plus the cluster-wide `INGRESS_HOST_SUFFIX`; never free text.
 
 # Deployment

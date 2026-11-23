@@ -21,7 +21,7 @@ sources:
 - **Auth:** `Authorization: Bearer` with one of three token kinds:[^desc]
   - **API key:** a Secret labelled `fusion-platform.io/api-key=true`; the role comes from the annotation `fusion-platform.io/role`.
   - **OIDC JWT.**
-  - **Service-account token (TokenReview):** the SA must be in the API's namespace or in `AUTH_SA_NAMESPACES`, and must carry the label `fusion-platform.io/role`.
+  - **Service-account token**, checked with TokenReview.
 
   Roles are `viewer`/`editor`/`admin`. `AllowUnauthenticated` is for development only.
 - **Health:** `/healthz`, `/readyz`, registered before the auth middleware.

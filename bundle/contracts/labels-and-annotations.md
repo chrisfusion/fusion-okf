@@ -34,8 +34,6 @@ sources:
 
 | Key | On | Meaning |
 |---|---|---|
-| `fusion-platform.io/mountable=true` | Secret | may be referenced by workload pods |
-| `fusion-platform.io/kafka-credentials=true` | Secret | may be used by Kafka triggers |
 | `fusion-platform.io/api-key=true` | Secret | weave API key; role in annotation `fusion-platform.io/role` |
 | `fusion-platform.io/role` | ServiceAccount label | API role for SA TokenReview callers (`viewer` / `editor` / `admin`) |
 

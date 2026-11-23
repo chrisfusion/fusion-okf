@@ -59,7 +59,7 @@ forge parses `runner` as an opaque value and passes everything beyond the typed 
 # Who reads it when
 
 1. **Build time** - forge watcher / app build handler reads it from the repo (in-memory clone) for name, version, builder image; the builder uploads it as one of the three app files.
-2. **Deploy time** - weave's `indexclient.FetchAppMetadataAndVersion` downloads it from index (cached 30 s) and maps it to [`WEAVE_*` env vars](/contracts/weave-env-vars.md), ports and resources.[^flux]
+2. **Deploy time** - weave's `indexclient.FetchAppMetadataAndVersion` downloads it from index and maps it to [`WEAVE_*` env vars](/contracts/weave-env-vars.md), ports and resources.[^flux]
 3. **Run time** - [fusion-runner](/services/fusion-runner.md) reads only the env vars, never the file.[^runner]
 
 # Rules

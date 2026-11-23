@@ -57,7 +57,7 @@ Humans never call backend services directly: the BFF validates the OIDC session,
 
 # Technology baseline
 
-- Backends: Go 1.25 (weave: Go 1.27), Gin (weave/wizard: chi), pgx/v5, controller-runtime v0.19 for operators.
+- Backends: Go 1.25, Gin (weave/wizard: chi), pgx/v5, controller-runtime v0.19 for operators.
 - All Go repos vendor their dependencies: CI builds images without internet access (`docker build --network none`).
 - Images are distroless; charts live in each repo's `deployment/` and are deployed by [Flux](/services/fusion-fleet.md).[^fleet]
 - License: GPL-3.0 everywhere.
