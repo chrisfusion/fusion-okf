@@ -17,3 +17,12 @@ contracts/crds:
 glossary:
   title: Glossary
   description: Platform terms, one page per term.
+issues:
+  title: Known issues
+  description: Verified bugs, inconsistencies and stale documentation across repos, each with cause, impact and fix.
+conventions:
+  title: Conventions
+  description: Rules every repo follows - offline builds, logging, changelog and releases, Helm and CRDs, operators, health endpoints.
+operations:
+  title: Operations
+  description: Running the platform locally - minikube, per-service deploys, Postgres, DNS, Gitea and Flux.
